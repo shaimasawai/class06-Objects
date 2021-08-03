@@ -1,12 +1,16 @@
 
-
 body{
+    margin: auto;
+    /* width: 50%; */
+ 
     background-color: antiquewhite;
 }
 
-ul{
-    text-size-adjust: 20px;
-    color: forestgreen ;
+.prodactt{
+    font-style: italic;
+    font-family: serif;
+    font-weight: bold;
+    color: chocolate;
 }
 
 h1{
@@ -16,3 +20,51 @@ h1{
 .imgcookies{
     background-position: 50% 50%;
 }
+
+header{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.imgg{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+h2{
+    align-items: center;
+    font-style: italic;
+    font-family: serif;
+    font-weight: bold;
+}
+
+p{
+    font-style: italic;
+    font-family: serif;
+    font-weight: bold;
+}
+
+.location{
+
+    font-style: italic;
+    font-family: serif;
+    font-weight: bold;
+    color: indianred;
+}
+
+.hore{
+    font-style: italic;
+    font-family: serif;
+    font-weight: bold;
+    color: salmon;
+}
+footer{
+    font-style: italic;
+    font-family: serif;
+    font-weight: bold;
+    color: rgb(156, 77, 68);
+    
+}
+
