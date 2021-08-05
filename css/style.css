@@ -36,14 +36,18 @@ header{
 h2{
     align-items: center;
     font-style: italic;
-    font-family: serif;
+  color: chartreuse;
     font-weight: bold;
+
+    font-family: 'Aclonica';
 }
 
 p{
     font-style: italic;
-    font-family: serif;
+    /* font-family: serif; */
     font-weight: bold;
+    font-family: Helvetica;
+    color: chocolate;
 }
 
 .location{
@@ -83,7 +87,7 @@ footer{
     font-style: italic;
     font-family: serif;
     font-weight: bold;
-   
+    font-family: Arial;
 }
 
 .d{

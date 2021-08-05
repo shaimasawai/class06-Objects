@@ -150,18 +150,20 @@ for( let s=0 ; s < place.length ; s++){
 
 footerRow();
 
-// let mycookes= document.getElementById('locationcookies');
+ let mycookes= document.getElementById('locationcookies');
 
-// mycookes.addEventListener('submit' ,nwecookies);
-// function nwecookies (event){
-//   event.preventDefault();
-//   let location = event. target.location.value;
-//   let minimum = event.target.minimum.value;
-//   let max = event.target.max.value;
-//   let avg = event.target.avg.value;
+ mycookes.addEventListener('submit' ,nwecookies);
+ function nwecookies (event){
+   event.preventDefault();
+   let location = event. target.location.value;
+   let minimum = event.target.minimum.value;
+   let max = event.target.max.value;
+   let avg = event.target.avg.value;
 
-//   let newlocation  = new Salmoncookies (location , minimum , max , avg );
+   let newlocation  = new Salmoncookies (location , minimum , max , avg );
 
-//   console.log(newlocation);
+   console.log(newlocation);
 
-// }
+   newlocation.castmerph(minimum,max);
+
+ }
