@@ -50,7 +50,7 @@ for( let i=0 ; i< 13 ; i++)
    let totalB = 0 ;
    for(let x=0 ; x < place.length ; x++ ) {
 
-      totalB += place[x] + randomHoursArray[i];
+      totalB += place[x] . randomHoursArray[i];
 }
 tddate.textContent = totalB;
 tr3elem.appendChild(tddate);
