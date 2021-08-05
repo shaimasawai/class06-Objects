@@ -1,19 +1,21 @@
 'use strict'
+
 function randomNumber(minCust, maxCust) {
 
-   return Math.floor(Math.random() * (maxCust - minCust + 1)) + minCust;
+
+  return Math.floor(Math.random() * (maxCust - minCust + 1)) + minCust;
 
 
 }
 let global = document.getElementById('container');
 let hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
-let place = [];
+let place = [ ];
 
 let table = document. createElement('table');
 
 
 function generatetable() {
-   let article = document.createElement('article')
+   let article = document.createElement('article');
  global.appendChild(article);
  article.appendChild(table);
 
@@ -27,11 +29,11 @@ function generatetable() {
  for (let i = 0; i < hours.length; i++) {
    thelem = document.createElement('th');
    trelem.appendChild(thelem);
-   thelem.textContent = ` ${hours[i]}`;
+   thelem.textContent = `  ${hours[i]}  ` ;
 
  };
 
- thelem.textContent= 'Daily location total';
+ thelem.textContent= '  Daily location total';
 
 }
 
@@ -44,16 +46,26 @@ function footerRow(){
        tr3elem.appendChild(td3elem);
        td3elem.textContent='Total';
        
+       
 for( let i=0 ; i< 13 ; i++)
 {
    let tddate = document.createElement('td');
    let totalB = 0 ;
    for(let x=0 ; x < place.length ; x++ ) {
 
+
       totalB += place[x] . randomHoursArray[i];
 }
 tddate.textContent = totalB;
 tr3elem.appendChild(tddate);
+
+      totalB += place[x] . randomHoursArray[i] ;
+    }
+
+
+    tddate.textContent = totalB;
+    tr3elem.appendChild(tddate);
+
 
    }
 
@@ -74,7 +86,7 @@ tr3elem.appendChild(tddate);
 
 
 
-function Salmoncookies(shopName, minCust, maxCust, avgCookies, total, randomHoursArray) {
+function Salmoncookies(shopName, minCust, maxCust, avgCookies, total, randomHoursArray ) {
 
    this.shopName = shopName;
    this.minCust = minCust;
@@ -136,7 +148,7 @@ let parise = new Salmoncookies ('paries' , 20 , 38 , 2.4 ,0 , []);
 
 
 generatetable();
-for( let s=0 ; s< place.length ; s++){
+for( let s=0 ; s < place.length ; s++){
    place[s].castmerph();
    place[s].render();
 
@@ -144,3 +156,22 @@ for( let s=0 ; s< place.length ; s++){
 }
 
 footerRow();
+
+
+
+// let mycookes= document.getElementById('locationcookies');
+
+// mycookes.addEventListener('submit' ,nwecookies);
+// function nwecookies (event){
+//   event.preventDefault();
+//   let location = event. target.location.value;
+//   let minimum = event.target.minimum.value;
+//   let max = event.target.max.value;
+//   let avg = event.target.avg.value;
+
+//   let newlocation  = new Salmoncookies (location , minimum , max , avg );
+
+//   console.log(newlocation);
+
+// }
+
