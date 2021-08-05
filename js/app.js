@@ -53,12 +53,19 @@ for( let i=0 ; i< 13 ; i++)
    let totalB = 0 ;
    for(let x=0 ; x < place.length ; x++ ) {
 
+
+      totalB += place[x] . randomHoursArray[i];
+}
+tddate.textContent = totalB;
+tr3elem.appendChild(tddate);
+
       totalB += place[x] . randomHoursArray[i] ;
     }
 
 
     tddate.textContent = totalB;
     tr3elem.appendChild(tddate);
+
 
    }
 
@@ -150,6 +157,8 @@ for( let s=0 ; s < place.length ; s++){
 
 footerRow();
 
+
+
 // let mycookes= document.getElementById('locationcookies');
 
 // mycookes.addEventListener('submit' ,nwecookies);
@@ -165,3 +174,4 @@ footerRow();
 //   console.log(newlocation);
 
 // }
+
