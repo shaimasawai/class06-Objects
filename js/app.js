@@ -10,7 +10,7 @@ let hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '
 let place = [];
 
 let table = document. createElement('table');
-
+table.id = 'finalTable';
 
 function generatetable() {
    let article = document.createElement('article')
@@ -94,9 +94,9 @@ Salmoncookies.prototype.castmerph = function () {
    let sum = 0;
    for (let i = 0; i < hours.length; i++) {
        sum = randomNumber(this.minCust, this.maxCust) * this.avgCookies;
-       let x = Math.floor(sum);
-       this.randomHoursArray.push(x);
-       this.total += x;
+       let calc = Math.floor(sum);
+       this.randomHoursArray.push(calc);
+       this.total += calc;
 
    }
 
@@ -143,26 +143,29 @@ for( let s=0 ; s< place.length ; s++){
 
 }
 
-<<<<<<< HEAD
+
 footerRow();
 
  let mycookes= document.getElementById('locationcookies');
 
- mycookes.addEventListener('submit' ,nwecookies);
- function nwecookies (event){
+ mycookes.addEventListener('submit' ,submitHandler);
+ function submitHandler (event){
    event.preventDefault();
-   let location = event. target.location.value;
-   let minimum = event.target.minimum.value;
-   let max = event.target.max.value;
-   let avg = event.target.avg.value;
-
-   let newlocation  = new Salmoncookies (location , minimum , max , avg );
+   let placeName = event.target.placeName.value;
+   let min1 = event.target.min1.value;
+   let max1 = event.target.max1.value;
+   let avg1 = event.target.avg1.value;
+   document.getElementById('finalTable').deleteRow(-1);
+   let min1new = Number(min1);
+   let max1new = Number(max1);
+   let avg1new = Number(avg1);
+   let newlocation  = new Salmoncookies (placeName , min1new , max1new , avg1new, 0 , [] );
 
    console.log(newlocation);
 
-   newlocation.castmerph(minimum,max);
-
+   newlocation.castmerph(min1new,max1new);
+   newlocation.render();
+   footerRow();
  }
-=======
-footerRow();
->>>>>>> 63431c99204eb012f4099de488ae65a38818e2e0
+
+// footerRow();
